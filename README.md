@@ -37,20 +37,6 @@ PowerShell ou no WSL.
 
 ---
 
-## 📃 Índice
-
-- [Pré-requisitos](#pré-requisitos)
-- [Etapa 0 - Preparar Windows (WSL2)](#--etapa-0---preparar-windows-wsl2)
-- [Etapa 1 - Instalar Rancher Desktop](#-etapa-1---instalar-rancher-desktop)
-- [Etapa 2 - Instalar kubectl e Git](#etapa-2---instalar-kubectl-e-git)
-- [Etapa 3 - Fork e criar repositório GitHub](#etapa-3---fork-e-criar-repositório-github)
-- [Etapa 4 - Instalar ArgoCD](#etapa-4---instalar-argocd)
-- [Etapa 5 - Acessar ArgoCD](#etapa-5---acessar-argocd)
-- [Etapa 6 - Criar App no ArgoCD](#etapa-6---criar-app-no-argocd)
-- [Etapa 7 - Acessar frontend](#etapa-7---acessar-frontend)
-- [Resultado Final](#resultado-final)
-- [Entregáveis](#entregáveis)
-
 ## 🔍 Pré-requisitos
 
 -   Windows 11

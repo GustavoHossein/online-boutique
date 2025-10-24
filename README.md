@@ -26,7 +26,7 @@ PowerShell ou no WSL.
 
 ---
 
-## Pré-requisitos
+## ⚙️ Pré-requisitos
 
 - Windows 10/11 com Hyper-V habilitado
 - Minikube instalado e configurado
@@ -37,7 +37,7 @@ PowerShell ou no WSL.
 
 ---
 
-## Índice
+## 📃 Índice
 
 - [Pré-requisitos](#pré-requisitos)
 - [Etapa 0 - Preparar Windows (WSL2)](#etapa-0---preparar-windows-wsl2)
@@ -51,20 +51,20 @@ PowerShell ou no WSL.
 - [Resultado Final](#resultado-final)
 - [Entregáveis](#entregáveis)
 
-## Pré-requisitos
+## 🔍 Pré-requisitos
 
 -   Windows 11
 -   GitHub
 -   Internet
 -   (Opcional) WSL2 ativado
 
-## Etapa 0 - Preparar Windows (WSL2)
+## 🛠️ Etapa 0 - Preparar Windows (WSL2)
 
 ``` powershell
 wsl --install
 ```
 
-## Etapa 1 - Instalar Rancher Desktop
+## 🛠️ Etapa 1 - Instalar Rancher Desktop
 
 Baixe em https://rancherdesktop.io/ e ative **Kubernetes**.
 
@@ -74,7 +74,7 @@ Verifique:
 kubectl get nodes
 ```
 
-## Etapa 2 - Instalar kubectl e Git
+## 🛠️ Etapa 2 - Instalar kubectl e Git
 
 ``` powershell
 curl -LO "https://dl.k8s.io/release/stable.txt"
@@ -82,7 +82,7 @@ curl -LO "https://dl.k8s.io/release/stable.txt"
 ```
 Instalar Git: https://git-scm.com/download/win
 
-## Etapa 3 - Fork e repositório GitHub
+## 💿 Etapa 3 - Fork e repositório GitHub
 
 ``` bash
 git clone https://github.com/<seu-usuario>/gitops-microservices.git
@@ -94,14 +94,14 @@ git commit -m "Adicionar manifests"
 git push origin main
 ```
 
-## Etapa 4 - Instalar ArgoCD
+## 📌 Etapa 4 - Instalar ArgoCD
 
 ``` bash
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-## Etapa 5 - Acessar ArgoCD
+## 📌 Etapa 5 - Acessar ArgoCD
 
 ``` bash
 kubectl port-forward svc/argocd-server -n argocd 8080:443
@@ -115,7 +115,7 @@ Senha:
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
-## Etapa 6 - Criar App no ArgoCD
+## 📋 Etapa 6 - Criar App no ArgoCD
 
 -   NEW APP
 -   Repo: `https://github.com/<seu-usuario>/gitops-microservices`
@@ -124,7 +124,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 -   Namespace: `default`
 -   Após isso clicar em -> `SYNC`
 
-## Etapa 7 - Acessar frontend (port-forward)
+## 🖥️ Etapa 7 - Acessar frontend (port-forward)
 
 ``` bash
 kubectl get svc -A | grep frontend
@@ -133,12 +133,12 @@ kubectl port-forward svc/frontend 8081:80 -n default
 
 Acesse: `http://localhost:8081`
 
-## Resultado Final
+## 🚀 Resultado Final
 <p align="center">
   <img src="img/Resultado.png" alt="Resultado Do Projeto">
 </p>
 
-## Entregáveis
+## 🎯 Entregáveis
 
 -   Repositório Git público com manifest
 -   ArgoCD instalado (`kubectl get pods -n argocd`)

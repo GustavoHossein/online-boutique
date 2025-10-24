@@ -58,7 +58,7 @@ PowerShell ou no WSL.
 -   Internet
 -   (Opcional) WSL2 ativado
 
-## Etapa 0
+## Etapa 0 - Preparar Windows (WSL2)
 
 ``` powershell
 wsl --install

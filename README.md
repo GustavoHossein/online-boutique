@@ -40,7 +40,7 @@ PowerShell ou no WSL.
 ## Índice
 
 -   [Pré-requisitos](#pré-requisitos)
--   [Etapa 0 - Preparar Windows (WSL2)](#etapa-0)
+-   [Etapa 0 - Preparar Windows (WSL2)](#etapa-0-Preparar-Windows-(WSL2))
 -   [Etapa 1 - Instalar Rancher Desktop](#etapa-1)
 -   [Etapa 2 - Instalar kubectl e Git](#etapa-2)
 -   [Etapa 3 - Fork e criar repositório GitHub](#etapa-3)

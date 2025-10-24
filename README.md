@@ -122,7 +122,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 -   Path: `k8s`
 -   Cluster: `https://kubernetes.default.svc`
 -   Namespace: `default`
--   SYNC
+-   Após isso clicar em -> `SYNC`
 
 ## Etapa 7 - Acessar frontend (port-forward)
 
@@ -134,7 +134,9 @@ kubectl port-forward svc/frontend 8081:80 -n default
 Acesse: `http://localhost:8081`
 
 ## Resultado Final
-![resultadoDoProjeto](./img/Resultado.png)
+<p align="center">
+  <img src="img/Resultado.png" alt="Resultado Do Projeto">
+</p>
 
 ## Entregáveis
 
